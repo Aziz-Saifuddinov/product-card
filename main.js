@@ -5,7 +5,7 @@ const changeColorAllCardButton = document.querySelector('#change-color-all-card'
 const redColorHash = '#ff1500ff';
 const yellowColorHash = '#ddff00ff';
 
-changeColorAllCardButton.addEventListener('click',() => {
+changeColorAllCardButton.addEventListener('click', () => {
  productCards.forEach((card) => card.style.backgroundColor = redColorHash)
 })
 
@@ -37,7 +37,7 @@ function openGoogle() {
 
 const outputLogButton = document.querySelector('#output-console-log')
 
-outputLogButton.addEventListener('click',() => outputConsoleLog("ДЗ №4"))
+outputLogButton.addEventListener('click', () => outputConsoleLog("ДЗ №4"))
 
 function outputConsoleLog(message) {
   alert(message)
@@ -48,7 +48,7 @@ function outputConsoleLog(message) {
 
 const titleProduct = document.querySelector('.title-product');
 
-titleProduct.addEventListener('mouseover',() => {
+titleProduct.addEventListener('mouseover', () => {
   console.log('Текст заголовка',titleProduct.textContent);
 })
 
