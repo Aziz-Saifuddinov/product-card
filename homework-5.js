@@ -50,11 +50,11 @@ buyOil(1250)
 
 // 6. Создать 1 функцию и именовать её по своему усмотрению
 
-const favoriteDrink = () => {
+const showFavoriteDrink = () => {
   console.log("Мой любимый напиток — кофе");
 }
 
-favoriteDrink();
+showFavoriteDrink();
 
 // 7. Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
 
