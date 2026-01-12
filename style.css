@@ -104,3 +104,11 @@
 .product-composition {
   margin-left: 14px;
 }
+
+.bg-red { 
+  background-color: #ff4757;
+}
+
+.bg-yellow { 
+  background-color: #FFFF00; 
+}
