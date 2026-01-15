@@ -27,16 +27,15 @@ console.log(user);
 
 // Task 5
 
-function checkMaxSpeed(maxSpeed) {
+function checkMaxSpeed(vehicle) {
   if (!vehicle.maxSpeed) {
-    vehicle.maxSpeed = '305 km/h'
-    console.log(vehicle)
-  } else {
-    return
+    vehicle.maxSpeed = '305 km/h';
   }
+
+  console.log(vehicle);
 }
 
-checkMaxSpeed()
+
 
 // Task 6
 
@@ -129,10 +128,10 @@ console.log(allBikes);
 
 // Task 10 
 
-function isRareBike(bikes) {
+function addRareBike(bikes) {
   return bikes.map(bikes => ({
     ...bikes, rare: bikes.year < 2006
   }));
 }
 
-console.log(isRareBike(hondaBikes))
+console.log(addRareBikeRareBike(hondaBikes))
