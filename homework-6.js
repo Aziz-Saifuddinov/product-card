@@ -39,11 +39,11 @@ function checkMaxSpeed(vehicle) {
 
 // Task 6
 
-function getProperty(vehicle, model) {
-  console.log(vehicle[model]);
+function getObjectProperty(object, key) {
+  console.log(object[key]);
 }
 
-getProperty(vehicle, 'model');
+getObjectProperty(vehicle, 'model');
 
 // Task 7
 
@@ -130,7 +130,8 @@ console.log(allBikes);
 
 function addRareBike(bikes) {
   return bikes.map(bikes => ({
-    ...bikes, rare: bikes.year < 2006
+    ...bikes,
+    rare: bikes.year < 2006
   }));
 }
 
