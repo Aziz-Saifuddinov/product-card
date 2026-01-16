@@ -131,7 +131,7 @@ console.log(allBikes);
 function addRareBike(bikes) {
   return bikes.map(bikes => ({
     ...bikes,
-    rare: bikes.year < 2006
+    isRare: bikes.year < 2006
   }));
 }
 
