@@ -3,11 +3,11 @@ import { commentaries } from "./comments.js";
 // 2. Создать массив чисел от 1 до 10. Отфильтровать его таким образом,
 // что бы мы получил массив чисел, начиная с 5.
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const filteredNumbers = numbers.filter(number => number >= 5);
 
-console.log(filteredNumbers)
+console.log(filteredNumbers);
 
 // 3. Создать массив строк, относящихся к любой сущности
 // (название фильмов/книг, кухонные приборы, мебель и т.д.),
@@ -20,7 +20,7 @@ const games = [
   'counter strike',
   'MOTOGP',
   'ufc',
-]
+];
 
 const checkGame = games.includes('MOTOGP');
 console.log(checkGame);
@@ -30,8 +30,8 @@ console.log(checkGame);
 // Два вышеуказанных массива с помощью этой функции перевернуть.
 
 const reverseArray = (array) => {
-  console.log(array.reverse())
-}
+  console.log(array.reverse());
+};
 
 reverseArray(games);
 reverseArray(numbers);
@@ -80,13 +80,13 @@ const calculateSymbols = commentaries.map(commentary => {
 const showEmailsByReduce = commentaries.reduce((accum, comment) => {
   accum.push(comment.email);
   return accum;
-}, [])
+}, []);
 console.log(showEmailsByReduce);
 
-const showEmailsByMap = commentaries.map(commentaries => commentaries.email)
+const showEmailsByMap = commentaries.map(commentaries => commentaries.email);
 console.log(showEmailsByMap);
 
 // 12. Почитать про методы toString(),
 // join() и перебрав массив с задания №11, привести его к строке.
 
-const turnEmailsToString = showEmailsByMap.join()
+const turnEmailsToString = showEmailsByMap.join();
