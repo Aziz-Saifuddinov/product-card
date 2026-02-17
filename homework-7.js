@@ -3,8 +3,6 @@ import { commentaries } from "./comments.js";
 // 2. Создать массив чисел от 1 до 10. Отфильтровать его таким образом,
 // что бы мы получил массив чисел, начиная с 5.
 
-import { commentaries } from "./comments.js";
-
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const filteredNumbers = numbers.filter(number => number >= 5);
@@ -41,27 +39,40 @@ reverseArray(numbers);
 // 7. Вывести в консоль массив тех комментариев
 // почта пользователей которых содержит ".com"
 
-const filteredEmail = commentaries.filter(commentaries => commentaries.email.includes('.com'));
-console.log(filteredEmail);
+const filteredEmail = commentaries.filter(commentary => {
+  return commentary.email.includes('.com');
+});
 
 // 8. Перебрать массив таким образом, что бы
 // пользователи с id меньше или равно 5 имели postId: 2
 // а те, у кого id больше 5, имели postId: 1
 
-const filteredId = commentaries.map(commentaries => ({...commentaries, postId: commentaries.id <= 5 ? 2 : 1}))
-console.log(filteredId);
+const filteredId = commentaries.map(commentary => {
+  return {
+    ...commentary,
+    postId: commentary.id <= 5 ? 2 : 1
+  };
+});
 
 // 9. Перебрать массив, что бы объекты состояли только из айди и имени
 
-const updatedCommentaries = commentaries.map(commentaries => ({id: commentaries.id, name: commentaries.name}))
-console.log(updatedCommentaries);
+const updatedCommentaries = commentaries.map(commentary => {
+  return {
+    id: commentary.id,
+    name: commentary.name
+  };
+});
 
 // 10. Перебираем массив, добавляем объектам
 // свойство isInvalid и проверяем: если длина тела сообщения
 // (body) больше 180 символов - устанавливаем true, меньше - false.
 
-const calculateSymbols = commentaries.map(commentaries => ({...commentaries, isInValid: commentaries.body.length > 180}));
-console.log(calculateSymbols);
+const calculateSymbols = commentaries.map(commentary => {
+  return {
+    ...commentary,
+    isInValid: commentary.body.length > 180
+  };
+});
 
 // 11. Почитать про метод массива reduce. Используя его,
 // вывести массив почт и провернуть тоже самое с помощью метода map
