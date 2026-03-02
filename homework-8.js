@@ -2,7 +2,7 @@ import{ productCards } from "./productCards.js";
 
 // 3. По аналогии из лекции — создать и реализовать шаблон для продуктовых карточек.
 
-const productTemplate = document.getElementById('product-template')
+const productTemplate = document.getElementById('product-template');
 const productList = document.getElementById('product-list')
 
 function outputProductCards(productCards) {
@@ -14,7 +14,7 @@ function outputProductCards(productCards) {
     productClone.querySelector('.product-description').textContent = product.description
     productClone.querySelector('.product-compound').innerHTML = product.compound.map(item => `<li>${item}</li>`).join("");
     productClone.querySelector('.cost-product').textContent = product.price + " \u20BD"
-    productList.appendChild(productClone)
+    productList.appendChild(productClone);
   })
 };
 
@@ -42,4 +42,4 @@ const showCards = () => {
   }
 }
 
-showCards()
+showCards();
