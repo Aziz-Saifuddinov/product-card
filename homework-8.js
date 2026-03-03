@@ -25,7 +25,7 @@ console.log(getProductNames);
 
 // 5. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
-const productDescription = productCards.reduce((accum, product) => [...accum, {[product.name]: product.description}], []);f
+const productDescription = productCards.reduce((accum, product) => [...accum, {[product.name]: product.description}], []);
 console.log(productDescription);
 
 // 6*. Реализовать функцию, которая при старте нашей страницы выводит сообщение с текстом, мол "Сколько карточек отобразить? От 1 до 5"
