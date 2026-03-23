@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
 }
 
-.products-list {
+#products-list {
   list-style: none;
   margin-top: -310px;
   margin-left: 200px;
