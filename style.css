@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
 }
 
-#products-list {
+.products-list {
   list-style: none;
   margin-top: -310px;
   margin-left: 200px;
@@ -45,7 +45,7 @@
   position: relative;
 }
 
-.card-list__item {
+.card-list-item {
   padding: 25px;
   width: 340px;
   height: 573px;
@@ -111,4 +111,240 @@
 
 .bg-yellow { 
   background-color: #FFFF00; 
+}
+
+.registration-container {
+  width: 370px;
+  margin: 0 auto;
+}
+
+.registration-form {
+  padding: 20px;
+  background-color:  #ac845c;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px;
+}
+
+.registration-form label {
+  color: #F7F7FA;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.submit-button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.modal-showed {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  background: #F7F7FA;
+  padding: 30px;
+  border-radius: 25px;
+  width: 350px;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content p {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  color: #515076;
+  line-height: 1;
+  padding: 5px 10px;
+}
+
+.auth-label {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+#authLoginButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #ac845c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#authLoginButton:hover {
+  background-color: #8d6b47;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #ac845c;
+}
+
+.message {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  height: 20px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* level 1 footer */
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 85px;
+  height: 477px;
+  background-color: #3A3A3A;
+  align-items: center;
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  height: 147px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.left-block a {
+  display: inline-block;
+  margin: 42px 30px 0px 0px;
+}
+
+.left-block h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.left-block span {
+  font-size: 18px;
+}
+
+.center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.center-block span {
+  font-size: 24px;
+}
+
+.footer-email {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-email input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 200px;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  margin: auto;
+  height: 15px;
+}
+
+.footer-email button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.right-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-block span {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.right-block a {
+  margin: 7px 0px;
+  font-size: 18px;
+}
+
+.footer_email_contact {
+  margin-top: 239px;
+  font-size: 16px;
+  opacity: 0.7;
+  color: #FFFFFF;
 }
