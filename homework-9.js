@@ -6,13 +6,16 @@ let user = undefined
 // и есть "отправкой формы", при нажатии на которую мы будем выводить
 // консоль лог в виде объекта: { email: 'введенная почта' }
 
+function getFormData(event) {
+  const form = event.target;
+  const formData = new FormData(form);
+  return Object.fromEntries(formData.entries());
+}
 const footerEmail = document.querySelector('#footer-email');
 footerEmail.addEventListener('submit', (event) => {
 event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  console.log(data);
+const data = getFormData(event);
+console.log(data);
 });
 
 // 5. Создать форму для регистрации.
@@ -47,13 +50,16 @@ const authPassword = document.getElementById('auth-password');
 const closeBtn = document.querySelector('.close-btn');
 const messageEl = document.getElementById('message');
 const loginForm = document.getElementById('loginForm');
+const overlay = document.querySelector('.overlay');
 
 authBtn.addEventListener('click', () => {
   modal.classList.add('modal-showed')
+  overlay.classList.add('overlay-showed');
 });
 
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('modal-showed');
+  overlay.classList.remove('overlay-showed');
 });
 
 loginForm.addEventListener('submit', (event) => {
@@ -67,8 +73,14 @@ loginForm.addEventListener('submit', (event) => {
     messageEl.style.color = 'green';
     messageEl.textContent = 'Успешный вход!';
     modal.classList.remove('modal-showed');
+    overlay.classList.remove('overlay-showed');
   } else {
     messageEl.style.color = 'red';
     messageEl.textContent = 'Неверный логин или пароль';
   }
+});
+
+overlay.addEventListener('click', () => {
+  modal.classList.remove('modal-showed');
+  overlay.classList.remove('overlay-showed');
 });
