@@ -11,11 +11,11 @@ function getFormData(event) {
   const formData = new FormData(form);
   return Object.fromEntries(formData.entries());
 }
-const footerEmail = document.querySelector('#footer-email');
-footerEmail.addEventListener('submit', (event) => {
-event.preventDefault();
-const data = getFormData(event);
-console.log(data);
+  const footerEmail = document.querySelector('#footer-email');
+  footerEmail.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = getFormData(event);
+  console.log(data);
 });
 
 // 5. Создать форму для регистрации.
@@ -83,4 +83,4 @@ loginForm.addEventListener('submit', (event) => {
 overlay.addEventListener('click', () => {
   modal.classList.remove('modal-showed');
   overlay.classList.remove('overlay-showed');
-});
+}); 
