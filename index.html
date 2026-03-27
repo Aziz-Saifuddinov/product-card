@@ -32,11 +32,97 @@
         </div>
       </li>
     </template>
+
+    <!-- Уровень 2: Форма регистрации -->
+
+  <div class="registration-container">
+    <form class="registration-form">
+
+      <label for="userName">Ваше имя:</label>
+      <input placeholder="Имя" required name="userName" id="userName">
+
+      <label for="userSurname">Ваша фамилия:</label>
+      <input placeholder="Фамилия" required name="userSurname" id="userSurname">
+
+      <label for="birthdate">Ваша дата рождения:</label>
+      <input placeholder="Дата рождения" type="date" required name="birthdate" id="birthdate">
+
+      <label for="login">Ваш логин:</label>
+      <input placeholder="Логин" required name="login" id="login">
+
+      <label for="password">Ваш пароль:</label>
+      <input placeholder="Пароль" type="password" required name="password" id="password">
+
+      <label for="repeatPassword">Повторите ваш пароль:</label>
+      <input placeholder="Повторение пароля" type="password" required name="repeatPassword" id="repeatPassword">
+
+      <button type="submit">Регистрация</button>
+      <button type="reset">Сбросить</button>
+
+      <button class="auth-btn" id="authBtn" type="button">Аутентификация</button>
+    </form>
+
+    <!-- Уровень 3: Кнопка аутентификации -->
+
+    <div class="overlay"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>Вход в систему</p>
+        <button class="close-btn">&times;</button>
+        <form id="loginForm">
+          <label for="login" class="auth-label">Логин:</label>
+          <input id="auth-login" required name="login" class="auth-input" placeholder="Введите логин"><br>
+
+          <label for="password" class="auth-label">Пароль:</label>
+          <input type="password" id="auth-password" required name="password" class="auth-input" placeholder="Введите пароль">
+
+          <button type="submit" id="authLoginButton">Войти</button>
+        </form>
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Уровень 1: footer -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="left-block">
+        <h3 class="color-white">Product Cards</h3>
+        <span class="color-white">У нас самые лучшие продукты для кожи!</span><br>
+        <a href="#">
+          <img src="images/tg-icon.svg" alt="telegram" width="21" height="17">
+        </a>
+        <a href="#">
+          <img src="images/vk-icon.svg" alt="vk" width="21" height="17">
+        </a>
+      </div>
+
+      <div class="center-block">
+        <span class="color-white">Подпишись на наши акции:</span>
+        <form class="footer-email" id="footer-email">
+          <input placeholder="Введите свой Email" type="email" required name="email">
+          <div class="vertical-line"></div>
+          <button type="submit">Подписаться</button>
+        </form>
+        <p class="footer_email_contact">www.product-cards.com©all right reserve</p>
+      </div>
+      <div class="right-block">
+        <span class="color-white">Быстрые ссылки</span>
+        <a class="color-white">Главная</a>
+        <a class="color-white">Магазин</a>
+        <a class="color-white">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
     <script src="main.js"></script>
     <script src="homework-5.js"></script>
     <script src="homework-6.js"></script>
     <script type="module" src="homework-7.js"></script>
     <script type="module" src="homework-8.js"></script>
     <script type="module" src="productCards.js"></script>
+    <script src="homework-9.js"></script>
 </body>
 </html>
