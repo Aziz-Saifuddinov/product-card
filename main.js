@@ -1,60 +1,32 @@
-// Покраска всех карточек
+import './homework-4.js';
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './productCards.js';
+import './feature/10-homework/form.js'
+import './feature/10-homework/modal.js'
 
-const productCards = document.querySelectorAll('.card-list-item');
-const changeColorAllCardButton = document.querySelector('#change-color-all-card');
-const redColorHash = '#ff1500ff';
-const yellowColorHash = '#ddff00ff';
+// 3. Создать структуру на ваш выбор, как было показано в лекции
+// (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
+// и реализуйте наследуемость классов
 
-changeColorAllCardButton.addEventListener('click', () => {
- productCards.forEach((card) => card.style.backgroundColor = redColorHash)
-})
-
-// Покраска первой карточки
-
-const firstProductCard = document.querySelector('.products-list');
-const changeColorFirstCardButton = document.querySelector('#change-color-first-card');
-
-changeColorFirstCardButton.addEventListener('click', () => {
-firstProductCard.style.backgroundColor = yellowColorHash;
-})
-
-// Открыть google
-
-const openGoogleButtom = document.querySelector('#open-google');
-openGoogleButtom.addEventListener('click', openGoogle)
-
-function openGoogle() {
-  const answer = confirm('Вы действительно хотите открыть Google?');
-
-  if (answer === true) {
-    window.open('https://google.com')
-  } else {
-    return;
+class Bike {
+  constructor(name, model, manufacturer, year) {
+    this.name = name; 
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year 
+  }
+  showBikeInfo() {
+    console.log(`Это мотоцикл ${this.name} ${this.model} этой модели, разработала ${this.manufacturer} ${this.year} в году`
+    );
   }
 }
 
-// Вывод консоль лог
+const cbr = new Bike('CBR', 'Fireblade', 'Honda', 2007);
+const mt = new Bike('MT', '09', 'Yamaha', 2014);
 
-const outputLogButton = document.querySelector('#output-console-log')
-
-outputLogButton.addEventListener('click', () => outputConsoleLog("ДЗ №4"))
-
-function outputConsoleLog(message) {
-  alert(message)
-  console.log(message)
-} 
-
-// Когда наводим на заголовок- выводим текст в консоль
-
-const titleProduct = document.querySelector('.title-product');
-
-titleProduct.addEventListener('mouseover', () => {
-  console.log('Текст заголовка',titleProduct.textContent);
-})
-
-// Меняем цвет кнопки
-
-document.getElementById('color-toggle-button').addEventListener('click', function() {
-  this.classList.toggle('bg-red');
-  this.classList.toggle('bg-yellow');
-});
+cbr.showBikeInfo();
+mt.showBikeInfo();

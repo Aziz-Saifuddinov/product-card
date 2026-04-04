@@ -1,3 +1,5 @@
+import { Modal } from "./feature/10-homework/modal";
+import { Form } from "./feature/10-homework/form";
 let user = undefined 
 
 // 4. К Форме, которая прикреплена в футере - добавить логику 
@@ -23,44 +25,38 @@ function getFormData(event) {
 
 const password = document.getElementById("password");
 const repeatPassword = document.getElementById("repeatPassword");
-const registrationForm = document.querySelector('.registration-form');
+const registrationForm = new Form('.registration-form');
 
-registrationForm.addEventListener('submit', (event) => {
+registrationForm.form.addEventListener('submit', (event) => {
   event.preventDefault()
-  const form = event.target;
-  const formData = new FormData(form)
-  const formValue = Object.fromEntries(formData.entries())
+
+  const formValue = registrationForm.getFormData();
+  if (!registrationForm.isValid()) {
+    console.log ('Форма не валидна!');
+    return;
+  }
   if (formValue.password !== formValue.repeatPassword) {
-    registrationForm.innerHTML = 'Регистрация не пройдена!';
+    registrationForm.form.innerHTML = 'Регистрация не пройдена!';
     return;
   }
   user = formValue;
   user.createdOn = new Date()
+  registrationForm.reset()
   console.log(user)
-  form.reset()
 });
 
 // 7. Создать кнопку "Аутентификация"
 // 8. Создать модальное окно, используя классы "modal, modal-showed". Логика такая: при нажатии на кнопку у нас открывается модальное окно
 
 const authBtn = document.getElementById('authBtn');
-const modal = document.getElementById('modal');
 const authLogin = document.getElementById('auth-login');
 const authPassword = document.getElementById('auth-password');
-const closeBtn = document.querySelector('.close-btn');
 const messageEl = document.getElementById('message');
 const loginForm = document.getElementById('loginForm');
 const overlay = document.querySelector('.overlay');
 
-authBtn.addEventListener('click', () => {
-  modal.classList.add('modal-showed')
-  overlay.classList.add('overlay-showed');
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('overlay-showed');
-});
+const modalId = new Modal('#modal');
+authBtn.addEventListener('click', () => modalId.openModal());
 
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -72,15 +68,9 @@ loginForm.addEventListener('submit', (event) => {
     currentUser.loginDate = new Date()
     messageEl.style.color = 'green';
     messageEl.textContent = 'Успешный вход!';
-    modal.classList.remove('modal-showed');
-    overlay.classList.remove('overlay-showed');
+    modalId.closeModal();
   } else {
     messageEl.style.color = 'red';
     messageEl.textContent = 'Неверный логин или пароль';
   }
 });
-
-overlay.addEventListener('click', () => {
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('overlay-showed');
-}); 
