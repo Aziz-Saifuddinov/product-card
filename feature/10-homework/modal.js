@@ -31,7 +31,7 @@ export class Modal {
   }
 
   closeModalByClick() {
-    const closeBtn = document.querySelector('.close-btn');
+    const closeBtn = this.modal.querySelector('.close-btn');
     closeBtn.addEventListener('click', () => this.closeModal());
   }
 

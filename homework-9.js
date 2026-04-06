@@ -32,7 +32,7 @@ registrationForm.form.addEventListener('submit', (event) => {
 
   const formValue = registrationForm.getFormData();
   if (!registrationForm.isValid()) {
-    console.log ('Форма не валидна!');
+  console.log ('Форма не валидна!');
     return;
   }
   if (formValue.password !== formValue.repeatPassword) {
