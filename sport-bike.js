@@ -3,15 +3,15 @@
 // и реализуйте наследуемость классов
 
 
-import { Bike } from './bike.js';
+import { Bike } from './Bike.js';
 
 export class SportBike extends Bike {
-  constructor(name, model, manufacturer, year, maxSpeed) {
-    super(name, model, manufacturer, year);
+  constructor(name, model, manufacturer, year, color, maxSpeed) {
+    super(name, model, manufacturer, year, color);
     this.maxSpeed = maxSpeed;
   }
 
-  showSportBikeInfo() {
-    console.log(`Максимальная скорость этого спортбайка — ${this.maxSpeed} км/ч.`);
+  showBikeInfo() {
+    console.log(`Это спортбайк ${this.name} ${this.model}, разработанный компанией ${this.manufacturer} в ${this.year} году. Цвет: ${this.color}. Максимальная скорость — ${this.maxSpeed} км/ч.`);
   }
 }
