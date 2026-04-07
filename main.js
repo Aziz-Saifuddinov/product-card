@@ -10,7 +10,7 @@ import './productCards.js';
 // (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
 // и реализуйте наследуемость классов
 
-import { SportBike } from './Sport-bike.js';
+import { SportBike } from './SportBike.js';
 
 const cbr = new SportBike('CBR', 'Fireblade', 'Honda', 2007, 'red', 299);
 const mt = new SportBike('MT', '09', 'Yamaha', 2014, 'blue', 245);
