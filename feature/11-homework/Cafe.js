@@ -6,11 +6,12 @@ export class Cafe {
   }
 
   getCafeInfo() {
-    return ` Кафе называется ${ this.name }, вы можете посетить нас по адресу ${ this.adress } и насладиться нашим меню!`;
+    return `Кафе называется ${this.name}, адрес: ${this.address}`;
   }
 
   orderDrink(drink) {
-    return drink.serveDrink();
+    console.log(`Вы заказали: ${drink.name}`);
+    drink.serveDrink();
   }
 
   getDrinkInfo(drink) {

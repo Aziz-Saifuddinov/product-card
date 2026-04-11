@@ -8,28 +8,9 @@ export class Tea extends Drink {
     this.sort = sort;
   }
 
-  getInfo() {
-    super.getInfo()
-    console.log(`Вид чая: ${ this.type }, сорт чая: ${ this.sort }`);
+  prepare() {
+    console.log(`Насыпаем чай ${this.sort}`);
+    console.log(`Завариваем ${this.type}`);
   }
 
-  #prepareTea() {
-    setTimeout(() => {
-console.log(`Насыпаем ${ this.name }, сорта - ${ this.sort }`)
-    }, 1000);
-
-    setTimeout(() => {
-      console.log(`Наливаем кипятка`)
-    }, 3000);
-
-    setTimeout(() => {
-      console.log(`даем настояться`)
-    }, 5000);
-  }
-
-  serveDrink() {
-    this.#prepareTea();
-    super.serveDrink();
-  }
-  
 }

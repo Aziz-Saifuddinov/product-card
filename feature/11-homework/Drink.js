@@ -9,31 +9,32 @@ export class Drink {
   }
 
   getInfo() {
-    return `Название напитка: ${ this.name }, Размер напитка: ${ this.size }, Стоимость напитка: ${ this.price } рублей`;
+    return `Название: ${this.name}, Размер: ${this.size}, Цена: ${this.price}`;
   }
 
   getTemperature() {
     return this.#temperature;
   }
 
-  setTemperature(temperature) {
-    return this.#temperature = temperature;
+  setTemperature(temp) {
+    this.#temperature = temp;
   }
 
-  #prepareDrink() {
-    console.log(`Готовится ${ this.name }`);
-  }
-
+  // шаблонный метод
   serveDrink() {
-    this.#prepareDrink();
+    this.prepare(); // вызываем то, что переопределят наследники
 
     setTimeout(() => {
-      console.log(`Температура готового напитка - ${ this.name }, ${ this.#temperature }°C`)
+      console.log(`Температура готового напитка - ${this.name}, ${this.#temperature}°C`);
     }, 9000);
 
     setTimeout(() => {
-      console.log(`Ваш напиток ${ this.name } готов, объёмом в ${ this.size }. К оплате ${ this.price } рублей`)
+      console.log(`Ваш напиток ${this.name} готов, объёмом ${this.size}. К оплате ${this.price} рублей`);
     }, 11000);
+  }
+
+  prepare() {
+    console.log(`Готовится ${this.name}`);
   }
   
 }
