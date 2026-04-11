@@ -5,6 +5,7 @@ import './homework-7.js';
 import './homework-8.js';
 import './homework-9.js';
 import './productCards.js';
+import './feature/11-homework/homework-11.js';
 
 // 3. Создать структуру на ваш выбор, как было показано в лекции
 // (имеется ввиду - с машинами/бьюти-продуктами). Придумайте свою структуру 
