@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Async</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <div id="status" class="status"></div>
+  <ul class="user-cards"></ul>
+  <template id="user-card-template">
+    <li class="user-card">
+      <span class="user-name"></span>
+      <span class="user-surname"></span>
+      <span class="user-email"></span>
+      <span class="user-age"></span>
+      <span class="user-city"></span>
+      <button class="delete-btn">Удалить</button>
+    </li>
+  </template>
+  <div class="control-buttons">
+    <button class="delete-all-btn">Удалить все карточки</button>
+    <button class="get-all-btn">Получить все карточки</button>
+  </div>
+  <script src="async.js"></script>
+</body>
+</html>
