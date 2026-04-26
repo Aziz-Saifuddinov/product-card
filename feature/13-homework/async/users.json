@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bruno",
+      "surname": "Fernandes",
+      "email": "bruno.fernandes@manutd.com",
+      "age": 30,
+      "city": "Porto"
+    },
+    {
+      "id": 2,
+      "name": "Marcus",
+      "surname": "Rashford",
+      "email": "marcus.rashford@manutd.com",
+      "age": 27,
+      "city": "Manchester"
+    },
+    {
+      "id": 3,
+      "name": "Carlos",
+      "surname": "Casemiro",
+      "email": "casemiro@manutd.com",
+      "age": 32,
+      "city": "Sao Paulo"
+    },
+    {
+      "id": 4,
+      "name": "Lisandro",
+      "surname": "Martínez",
+      "email": "lisandro.martinez@manutd.com",
+      "age": 26,
+      "city": "Lisbon"
+    }
+  ]
+}
