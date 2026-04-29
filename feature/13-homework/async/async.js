@@ -32,7 +32,7 @@ async function loadUsers() {
     localStorage.setItem('users', JSON.stringify(data.users));
 
     setTimeout(() => {
-       statusBlock.textContent = '';
+      statusBlock.textContent = '';
       renderUserCards(data.users);
     }, 1000);
 
@@ -56,16 +56,23 @@ function renderUserCards(usersArray) {
     userClone.querySelector('.user-age').textContent = `Возраст: ${ user.age }`;
     userClone.querySelector('.user-city').textContent = `Город: ${ user.city }`;
     userClone.querySelector('.delete-btn').addEventListener('click', () => {
-      if (confirm('Удалить пользователя?')) {
+
+    if (confirm('Удалить пользователя?')) {
         deleteUser(user.id);
-  }
+    }
 });
+
     userCards.appendChild(userClone);
-  })
+  });
 }
 
 function deleteUser(id) {
   let users = getUsersFromStorage();
+
+  if (!users) {
+    return; 
+  }
+
   users = users.filter(user => user.id !== id);
   if (users.length === 0) {
     localStorage.removeItem('users');
